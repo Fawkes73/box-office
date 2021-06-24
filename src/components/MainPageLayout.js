@@ -2,7 +2,7 @@ import React from 'react';
 import Navs from './Navs';
 import Title from '../pages/Title';
 
-const MainPageLayout = ({ childern }) => {
+const MainPageLayout = ({ children }) => {
   return (
     <div>
       <Title
@@ -11,7 +11,7 @@ const MainPageLayout = ({ childern }) => {
       />
       <Navs />
 
-      {childern}
+      {children}
     </div>
   );
 };
