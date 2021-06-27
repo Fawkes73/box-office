@@ -12,6 +12,9 @@ function App() {
       <Route exact path="/starred">
         <Starred />
       </Route>
+      <Route exact path="/show/:id">
+
+      </Route>
       <Route>
         <div>Page not found 404</div>
       </Route>
