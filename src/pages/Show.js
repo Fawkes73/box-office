@@ -1,6 +1,10 @@
-import React, { useEffect, useReducer } from 'react'
-import { useParams } from 'react-router'
+import React, { useEffect, useReducer } from 'react';
+import { useParams } from 'react-router';
+import ShowMainData from '../components/show/ShowMainData';
+import Details from '../components/show/Details';
 import { apiGet } from '../misc/config';
+import Seasons from '../components/show/Seasons';
+import Cast from '../components/show/Cast';
 
 
 
@@ -38,23 +42,17 @@ const Show = () => {
 
     let isMounted = true;
 
-    apiGet(`/shows/1?embed${id}=seasons&embed[]=cast`).then(results => {
-      if (isMounted) {
-        dispatch({ type: 'FETCH_SUCCESS', show: results })
-
-      }
-
-
-
-
-    }).catch(err => {
-      if (isMounted) {
-
-        dispatch({ type: 'FETCH_FAILED', error: err.message })
-
-      }
-
-    });
+    apiGet(`/shows/${id}?embed[]=seasons&embed[]=cast`)
+      .then(results => {
+        if (isMounted) {
+          dispatch({ type: 'FETCH_SUCCESS', show: results });
+        }
+      })
+      .catch(err => {
+        if (isMounted) {
+          dispatch({ type: 'FETCH_FAILED', error: err.message });
+        }
+      });
 
     return () => {
       isMounted = false;
@@ -74,7 +72,23 @@ const Show = () => {
 
   return (
     <div>
-      This is show page
+      <ShowMainData image={show.image} name={show.name} rating={show.rating} summary={show.summary} tags={show.genres} />
+
+      <div>
+        <h2>Details</h2>
+        <Details status={show.status} network={show.network} premired={show.premired} />
+      </div>
+
+      <div>
+        <h2>Seasons</h2>
+        <Seasons seasons={show._embedded.seasons} />
+      </div>
+
+      <div>
+        <h2>Cast</h2>
+        <Cast cast={show._embedded.cast} />
+      </div>
+
     </div>
   )
 }
