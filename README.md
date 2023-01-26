@@ -1,9 +1,35 @@
-### For running this project `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Box Office
+Simple web base application using React. Project for searching movies and star cast. This mini Project covers the basic of ReactJS and it's library. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Run Locally
 
+Clone the project
 
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install NPM 
+
+```bash
+   npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+ After running this project `npm run start` open the browser and paste the localhost link below
+```
+
+Open [http://localhost:3000] to view it in the browser.
+```
