@@ -25,26 +25,22 @@ Built as a mini-project for learning, experimentation, and fun! 🚀
 git clone https://link-to-project
 ```
 📁 Navigate to the Project
-bash
-Copy
-Edit
-cd box-office
-📥 Install Dependencies
-Make sure you have Node.js installed, then run:
 
-bash
-Copy
-Edit
+-- cd box-office
+-- 📥 Install Dependencies
+-- Make sure you have Node.js installed, then run:
+
+
 npm install
 🚀 Start the Development Server
-bash
-Copy
-Edit
+
+
 npm start
 Open your browser and visit:
 
 ```bash
 http://localhost:3000
+
 ```
 
 The app will automatically reload if you make changes to the code.
