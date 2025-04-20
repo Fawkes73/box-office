@@ -62,13 +62,13 @@ Axios (for API requests)
 
 Public API for movie data
 
-##📝 License
+## 📝 License
 This project is licensed under the MIT License.
 
-##🙌 Contributions
+## 🙌 Contributions
 Feel free to fork the repo, raise issues, and contribute improvements. PRs are welcome!
 
-##💡 Tip
+## 💡 Tip
 Want to deploy this? Use free platforms like:
 
 GitHub Pages (with some tweaks for React Router)
